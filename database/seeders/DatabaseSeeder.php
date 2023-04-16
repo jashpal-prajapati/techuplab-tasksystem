@@ -17,7 +17,14 @@ class DatabaseSeeder extends Seeder
         $this->call([
             TaskSeederr::class
         ]);
-        // \App\Models\User::factory(10)->create();
+        
+        \App\Models\User::factory()->create([
+            'name' => 'Jashpal Prajapati',
+            'email' => 'j@gmail.com',
+            'email_verified_at' => '2023-04-16 07:30:35',
+            'password' => '$2y$10$nW/pOxi4Vx3IPJrzqj953e1noA.d8UmIicY/.99MEOReSqOhOOVyi', // password
+            'remember_token' => '',
+        ]);
 
         \App\Models\NoteFile::factory(2)->create([
             'file_name' => fake()->name(),

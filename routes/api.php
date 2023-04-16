@@ -24,4 +24,7 @@ Route::middleware('auth:sanctum')->group( function() {
     });
 });
 Route::post('register', [UserController::class, 'register']);
-Route::post('login', [UserController::class, 'login'])->name('login');
+Route::post('login', [UserController::class, 'login']);
+Route::get('login', function(){
+    return 'Please login first !!';
+})->name('login');
